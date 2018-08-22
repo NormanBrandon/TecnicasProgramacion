@@ -1,0 +1,46 @@
+Instalar en tu computadora GIT para Windows de la siguiente pagina
+https://git-scm.com/download/win
+Abre cmd windows
+Pon los siguientes comando
+git config --global user.email "tucorreo@example.com"    <---- sin comillas y dale enter, luego pon el siguiente
+git config --global user.name Eduardo159
+
+
+Pasos para crear un repositorio
+0- Crear una carpeta con el nombre del repositorio que quieres crear
+1-Ve a tu cuenta de git y dale en start proyect
+2-Dale un nombre y una desripcion
+3- Dale en crear repositorio
+4-Te va a aparecer codigo y un link, p.e 'https://github.com/NormanBrandon/TecnicasProgramacion.git". Este es el link que vas
+a vincular a tu carpeta que hiciste en donde vas a guardar tus proyectos, solo recuerda ese link.
+5- Inicializa la carpeta con el comando "git init" , pero para eso debes estar en la carpeta en cmd usando "cd" para moverte entre
+carpetas, si te quieres regresar de carpeta usa "cd .." , si quieres ver las carpetas usa "dir"
+6- Usa el comando con el link del repo para vincular la carpeta
+git remote add origin https://github.com/NormanBrandon/TecnicasProgramacion.git 
+7- Ya esta, ya puedes trabajar
+
+Pasos para colaborar en github
+0- Crear una carpeta con el nombre del repositorio en el que quieres colaborar
+1- Inicializa la carpeta con el comando "git init" , pero para eso debes estar en la carpeta en cmd usando "cd" para moverte entre
+carpetas, si te quieres regresar de carpeta usa "cd .." , si quieres ver las carpetas usa "dir"
+2- Usa el comando con el link del repo para vincular la carpeta
+git remote add origin https://github.com/NormanBrandon/TecnicasProgramacion.git
+3- Ya esta
+
+
+
+COMO COLABORAR TRABAJAR EN GITHUB
+
+si hiciste los pasos anteriores debes tener la carpeta vacia, lo primero que debes hacer es bajar a la carpeta lo que esta en
+el repositorio.
+Como bajar lo que alguien mas subio???
+con el comando "git pull origin master"  <--- Se bajara lo que hay en master
+Como subir algo que hice??
+con el comando "git add ." agregas todo lo que creaste, luego hacer un commit, que basicamente es poner que cambios
+realizaste en una pequeña reseña,
+se hace con el comando: git commit -m "que le cambie con comillas"
+luego lo subes con "git push origin master", te va a pedir tu nombre y contraseña, la contraseña no se vera en consola.
+
+Listo, asi subes y bajas los cambios
+En resumen para bajar usas solo un comando, para subir usas 3 comandos
+
