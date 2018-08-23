@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Jirafa.cs" />
+    <Compile Include="Leon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,5 +41,13 @@ namespace Practica2
 
             Console.WriteLine("Caminando...");
         }
+        public void mostrarpapeles() {
+            Console.WriteLine("Su altura es :" +altura);
+            Console.WriteLine("Su peso es :" + peso);
+            Console.WriteLine("Numero de patas :" + patas);
+            Console.WriteLine("Su color es" + color);
+
+
+        }
     }
 }
