@@ -2,28 +2,24 @@
 
 namespace Practica2
 {
-    class Animal
+    abstract class Animal
     {
-        private string vertebrados;
-        private string glandmamarias;
-        private string placenta;
+        private string color;
+        private float altura;
+        private float peso;
         private ushort patas;
 
-        public void Vertebrados()
-        {
-            vertebrados = "Todos los mamiferos son vertebrados";
+        public ushort Patas { get => patas; set => patas = value; }
+        public float Peso { get => peso; set => peso = value; }
+        public float Altura { get => altura; set => altura = value; }
+        public string Color { get => color; set => color = value; }
 
-            Console.WriteLine("Caracteristica uno de los mamiferos: \n\n{0}", vertebrados);
+        public void comer() {
+            Console.WriteLine("Comiendo ....");
         }
-        public void glandMamarias()
-        {
-            glandmamarias = "Todos los mamiferos tienen glandulas mamarias para alimentar a sus crias";
-            Console.WriteLine("Caracteristica dos: {0}", glandmamarias);
-        }
-        public void Placenta()
-        {
-            placenta = "Han desarrollado placenta, lo que les ha permitido sobrevivir en el medio terrestre";
-            Console.WriteLine("Caracteristica tres: {0}", placenta);
+        public void caminar() {
+
+            Console.WriteLine("Caminando...");
         }
     }
 }

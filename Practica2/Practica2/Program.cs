@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Practica2
 {
@@ -10,6 +7,11 @@ namespace Practica2
     {
         static void Main(string[] args)
         {
+            Jirafa jira = new Jirafa(130,(float)4.5);
+            jira.caminar();
+            jira.comer();
+            
+
         }
     }
 }
