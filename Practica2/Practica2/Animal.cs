@@ -9,9 +9,29 @@ namespace Practica2
         private float peso;
         private ushort patas;
 
-        public ushort Patas { get => patas; set => patas = value; }
-        public float Peso { get => peso; set => peso = value; }
-        public float Altura { get => altura; set => altura = value; }
+        public ushort Patas {
+            get {
+                return patas; }
+            set {
+                patas = value;}
+        }
+        public float Peso {
+            get {
+                return peso; }
+            set
+            {
+                peso = value;
+            }
+        }
+        public float Altura {
+            get {
+                return altura;
+            }
+            set
+            {
+                altura = value;
+            }
+        }
         public string Color { get => color; set => color = value; }
 
         public void comer() {
