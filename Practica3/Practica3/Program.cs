@@ -11,6 +11,8 @@ namespace Practica3
             miRectangulo.Areas();
             Hexagono miHexagono = new Hexagono();
             miHexagono.Areas();
+            Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
