@@ -23,5 +23,14 @@ namespace Practica9
         {
             
         }
+
+        private void btnCalculaTotal_Click(object sender, EventArgs e)
+        {
+            Antibioticos anti = new Antibioticos();
+            int total = anti.Total(int.Parse(txtbPiezas.Text)) ;
+            int dosis = anti.Dosis(byte.Parse(txtbDosis.Text));
+            txtbTotal.Text = "$" + total + " , " + dosis +" Dosis";
+
+        }
     }
 }
