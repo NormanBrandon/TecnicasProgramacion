@@ -38,5 +38,10 @@ namespace Practica8
         {
 
         }
+
+        private void lblista_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
