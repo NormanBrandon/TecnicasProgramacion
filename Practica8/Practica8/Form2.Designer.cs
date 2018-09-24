@@ -42,6 +42,7 @@
             this.lblista.Size = new System.Drawing.Size(274, 109);
             this.lblista.TabIndex = 0;
             this.lblista.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblista.Click += new System.EventHandler(this.lblista_Click);
             // 
             // lbtotal
             // 
