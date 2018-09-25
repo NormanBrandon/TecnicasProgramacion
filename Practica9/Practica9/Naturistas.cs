@@ -30,7 +30,7 @@ namespace Practica9
 
         public string EfectosSecundarios()
         {
-            string efesec = "Sin efectos secundarios por ser producto naturista";
+            string efesec = "Sin efectos secundarios";
             return efesec;
         }
 

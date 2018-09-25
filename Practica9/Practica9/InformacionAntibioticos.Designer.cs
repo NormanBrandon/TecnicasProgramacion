@@ -41,14 +41,15 @@
             // 
             // txtbDosis
             // 
-            this.txtbDosis.Location = new System.Drawing.Point(181, 21);
+            this.txtbDosis.Location = new System.Drawing.Point(238, 24);
             this.txtbDosis.Name = "txtbDosis";
             this.txtbDosis.Size = new System.Drawing.Size(100, 20);
             this.txtbDosis.TabIndex = 2;
             // 
             // txtbSuministro
             // 
-            this.txtbSuministro.Location = new System.Drawing.Point(181, 112);
+            this.txtbSuministro.Enabled = false;
+            this.txtbSuministro.Location = new System.Drawing.Point(250, 113);
             this.txtbSuministro.Name = "txtbSuministro";
             this.txtbSuministro.Size = new System.Drawing.Size(100, 20);
             this.txtbSuministro.TabIndex = 3;
@@ -62,6 +63,7 @@
             // 
             // txtbTotal
             // 
+            this.txtbTotal.Enabled = false;
             this.txtbTotal.Location = new System.Drawing.Point(252, 265);
             this.txtbTotal.Name = "txtbTotal";
             this.txtbTotal.Size = new System.Drawing.Size(100, 20);
@@ -83,9 +85,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.Size = new System.Drawing.Size(163, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Dosis";
+            this.label2.Text = "Dosis (pastillas por día)";
             // 
             // label3
             // 
@@ -133,7 +135,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "InformacionAntibioticos";
-            this.Text = "Informacion Antibioticos";
+            this.Text = "Amoxicilina";
             this.ResumeLayout(false);
             this.PerformLayout();
 

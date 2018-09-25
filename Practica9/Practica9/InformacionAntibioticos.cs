@@ -29,7 +29,9 @@ namespace Practica9
             Antibioticos anti = new Antibioticos();
             int total = anti.Total(int.Parse(txtbPiezas.Text)) ;
             int dosis = anti.Dosis(byte.Parse(txtbDosis.Text));
-            txtbTotal.Text = "$" + total + " , " + dosis +" Dosis";
+            txtbTotal.Text = "$" + total + " , " + dosis + " Dosis";
+            string suministroAntibioticos = "Intravenoso";
+            txtbSuministro.Text = suministroAntibioticos;
 
         }
     }

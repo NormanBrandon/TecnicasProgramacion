@@ -17,5 +17,15 @@ namespace Practica9
             InitializeComponent();
             this.CenterToScreen();
         }
+
+        private void btnCalcularTotal_Click(object sender, EventArgs e)
+        {
+            Antigripales misAntigripales = new Antigripales();
+            int total = misAntigripales.Total(int.Parse(txtbPiezas.Text));
+            int dosis = misAntigripales.Dosis(byte.Parse(txtbDosis.Text));
+            txtbTotalDosis.Text = "$" + total + " , " + dosis + " Dosis";
+            string suministroAntigripales = "Oral";
+            txtbSuministro.Text = suministroAntigripales;
+        }
     }
 }

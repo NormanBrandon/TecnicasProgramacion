@@ -17,5 +17,19 @@ namespace Practica9
             InitializeComponent();
             this.CenterToScreen();
         }
+
+        private void btnCalcularTotal_Click(object sender, EventArgs e)
+        {
+            Naturistas misNaturistas = new Naturistas();
+            int total = misNaturistas.Total(int.Parse(txtbPiezas.Text));
+            int dosis = misNaturistas.Dosis(byte.Parse(txtbDosis.Text));
+            txtbTotalUno.Text = "$" + total + " , " + dosis + " Dosis";
+            string suministroNaturistas = "Oral y cutáneo";
+            txtbSuministro.Text = suministroNaturistas;
+
+            txtbEfecSec.Text = misNaturistas.EfectosSecundarios();
+            int totalMayorista = misNaturistas.Ventalibre(int.Parse(txtbMayoreo.Text));
+            txtbTotalDos.Text = "$" + totalMayorista;
+        }
     }
 }

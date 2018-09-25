@@ -34,14 +34,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbDosis = new System.Windows.Forms.TextBox();
+            this.txtbSuministro = new System.Windows.Forms.TextBox();
+            this.txtbPiezas = new System.Windows.Forms.TextBox();
+            this.txtbTotalUno = new System.Windows.Forms.TextBox();
+            this.txtbEfecSec = new System.Windows.Forms.TextBox();
+            this.txtbMayoreo = new System.Windows.Forms.TextBox();
+            this.btnCalcularTotal = new System.Windows.Forms.Button();
+            this.txtbTotalDos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -51,9 +51,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(60, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.Size = new System.Drawing.Size(163, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Dosis";
+            this.label2.Text = "Dosis (pastillas por día)";
             // 
             // label3
             // 
@@ -89,80 +89,85 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 118);
+            this.label6.Location = new System.Drawing.Point(399, 118);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 18);
+            this.label6.Size = new System.Drawing.Size(248, 18);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Venta libre mayoreo (piezas)";
+            this.label6.Text = "Venta sin receta al mayoreo (piezas)";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(489, 25);
+            this.label7.Location = new System.Drawing.Point(469, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "Efectos secundarios";
             // 
-            // textBox2
+            // txtbDosis
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtbDosis.Location = new System.Drawing.Point(272, 28);
+            this.txtbDosis.Name = "txtbDosis";
+            this.txtbDosis.Size = new System.Drawing.Size(100, 20);
+            this.txtbDosis.TabIndex = 2;
             // 
-            // textBox3
+            // txtbSuministro
             // 
-            this.textBox3.Location = new System.Drawing.Point(272, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtbSuministro.Enabled = false;
+            this.txtbSuministro.Location = new System.Drawing.Point(272, 115);
+            this.txtbSuministro.Name = "txtbSuministro";
+            this.txtbSuministro.Size = new System.Drawing.Size(100, 20);
+            this.txtbSuministro.TabIndex = 3;
             // 
-            // textBox4
+            // txtbPiezas
             // 
-            this.textBox4.Location = new System.Drawing.Point(272, 214);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtbPiezas.Location = new System.Drawing.Point(272, 214);
+            this.txtbPiezas.Name = "txtbPiezas";
+            this.txtbPiezas.Size = new System.Drawing.Size(100, 20);
+            this.txtbPiezas.TabIndex = 4;
             // 
-            // textBox5
+            // txtbTotalUno
             // 
-            this.textBox5.Location = new System.Drawing.Point(272, 306);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 5;
+            this.txtbTotalUno.Enabled = false;
+            this.txtbTotalUno.Location = new System.Drawing.Point(272, 306);
+            this.txtbTotalUno.Name = "txtbTotalUno";
+            this.txtbTotalUno.Size = new System.Drawing.Size(100, 20);
+            this.txtbTotalUno.TabIndex = 5;
             // 
-            // textBox6
+            // txtbEfecSec
             // 
-            this.textBox6.Location = new System.Drawing.Point(653, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtbEfecSec.Enabled = false;
+            this.txtbEfecSec.Location = new System.Drawing.Point(629, 22);
+            this.txtbEfecSec.Name = "txtbEfecSec";
+            this.txtbEfecSec.Size = new System.Drawing.Size(124, 20);
+            this.txtbEfecSec.TabIndex = 6;
             // 
-            // textBox7
+            // txtbMayoreo
             // 
-            this.textBox7.Location = new System.Drawing.Point(653, 115);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 7;
+            this.txtbMayoreo.Location = new System.Drawing.Point(653, 115);
+            this.txtbMayoreo.Name = "txtbMayoreo";
+            this.txtbMayoreo.Size = new System.Drawing.Size(100, 20);
+            this.txtbMayoreo.TabIndex = 7;
             // 
-            // button1
+            // btnCalcularTotal
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(576, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Calcular total";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularTotal.Location = new System.Drawing.Point(576, 306);
+            this.btnCalcularTotal.Name = "btnCalcularTotal";
+            this.btnCalcularTotal.Size = new System.Drawing.Size(110, 23);
+            this.btnCalcularTotal.TabIndex = 8;
+            this.btnCalcularTotal.Text = "Calcular total";
+            this.btnCalcularTotal.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
-            // textBox1
+            // txtbTotalDos
             // 
-            this.textBox1.Location = new System.Drawing.Point(653, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtbTotalDos.Enabled = false;
+            this.txtbTotalDos.Location = new System.Drawing.Point(653, 196);
+            this.txtbTotalDos.Name = "txtbTotalDos";
+            this.txtbTotalDos.Size = new System.Drawing.Size(100, 20);
+            this.txtbTotalDos.TabIndex = 7;
             // 
             // label1
             // 
@@ -180,14 +185,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(765, 367);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnCalcularTotal);
+            this.Controls.Add(this.txtbTotalDos);
+            this.Controls.Add(this.txtbMayoreo);
+            this.Controls.Add(this.txtbEfecSec);
+            this.Controls.Add(this.txtbTotalUno);
+            this.Controls.Add(this.txtbPiezas);
+            this.Controls.Add(this.txtbSuministro);
+            this.Controls.Add(this.txtbDosis);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -209,14 +214,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbDosis;
+        private System.Windows.Forms.TextBox txtbSuministro;
+        private System.Windows.Forms.TextBox txtbPiezas;
+        private System.Windows.Forms.TextBox txtbTotalUno;
+        private System.Windows.Forms.TextBox txtbEfecSec;
+        private System.Windows.Forms.TextBox txtbMayoreo;
+        private System.Windows.Forms.Button btnCalcularTotal;
+        private System.Windows.Forms.TextBox txtbTotalDos;
         private System.Windows.Forms.Label label1;
     }
 }

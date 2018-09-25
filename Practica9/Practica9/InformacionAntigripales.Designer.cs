@@ -32,11 +32,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnCalcularTotal = new System.Windows.Forms.Button();
+            this.txtbDosis = new System.Windows.Forms.TextBox();
+            this.txtbSuministro = new System.Windows.Forms.TextBox();
+            this.txtbPiezas = new System.Windows.Forms.TextBox();
+            this.txtbTotalDosis = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -45,9 +45,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(28, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.Size = new System.Drawing.Size(163, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Dosis";
+            this.label2.Text = "Dosis (pastillas por día)";
             // 
             // label3
             // 
@@ -79,43 +79,46 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Total a pagar y dosis totales";
             // 
-            // button1
+            // btnCalcularTotal
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(254, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Calcular total";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularTotal.Location = new System.Drawing.Point(254, 312);
+            this.btnCalcularTotal.Name = "btnCalcularTotal";
+            this.btnCalcularTotal.Size = new System.Drawing.Size(104, 23);
+            this.btnCalcularTotal.TabIndex = 1;
+            this.btnCalcularTotal.Text = "Calcular total";
+            this.btnCalcularTotal.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
-            // textBox2
+            // txtbDosis
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtbDosis.Location = new System.Drawing.Point(215, 34);
+            this.txtbDosis.Name = "txtbDosis";
+            this.txtbDosis.Size = new System.Drawing.Size(100, 20);
+            this.txtbDosis.TabIndex = 3;
             // 
-            // textBox3
+            // txtbSuministro
             // 
-            this.textBox3.Location = new System.Drawing.Point(158, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtbSuministro.Enabled = false;
+            this.txtbSuministro.Location = new System.Drawing.Point(158, 98);
+            this.txtbSuministro.Name = "txtbSuministro";
+            this.txtbSuministro.Size = new System.Drawing.Size(100, 20);
+            this.txtbSuministro.TabIndex = 4;
             // 
-            // textBox4
+            // txtbPiezas
             // 
-            this.textBox4.Location = new System.Drawing.Point(158, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.txtbPiezas.Location = new System.Drawing.Point(158, 158);
+            this.txtbPiezas.Name = "txtbPiezas";
+            this.txtbPiezas.Size = new System.Drawing.Size(100, 20);
+            this.txtbPiezas.TabIndex = 5;
             // 
-            // textBox5
+            // txtbTotalDosis
             // 
-            this.textBox5.Location = new System.Drawing.Point(254, 230);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.txtbTotalDosis.Enabled = false;
+            this.txtbTotalDosis.Location = new System.Drawing.Point(254, 230);
+            this.txtbTotalDosis.Name = "txtbTotalDosis";
+            this.txtbTotalDosis.Size = new System.Drawing.Size(100, 20);
+            this.txtbTotalDosis.TabIndex = 6;
             // 
             // InformacionAntigripales
             // 
@@ -123,17 +126,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(390, 360);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtbTotalDosis);
+            this.Controls.Add(this.txtbPiezas);
+            this.Controls.Add(this.txtbSuministro);
+            this.Controls.Add(this.txtbDosis);
+            this.Controls.Add(this.btnCalcularTotal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Name = "InformacionAntigripales";
-            this.Text = "Informacion Antigripales";
+            this.Text = "Tabcin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +147,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnCalcularTotal;
+        private System.Windows.Forms.TextBox txtbDosis;
+        private System.Windows.Forms.TextBox txtbSuministro;
+        private System.Windows.Forms.TextBox txtbPiezas;
+        private System.Windows.Forms.TextBox txtbTotalDosis;
     }
 }
