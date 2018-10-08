@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Practica11
@@ -39,9 +34,8 @@ namespace Practica11
         {
             try
             {
-                if (txtbProducto.Text == "")
+                if(txtbProducto.Text == "")
                 {
-                   
                     throw new ApplicationException("No dejar vacío");
                 }
                 else
@@ -55,7 +49,12 @@ namespace Practica11
             {
                 errorProv.SetError(txtbProducto, error.Message);
             }
-                  
+            catch(FormatException error)
+            {
+                errorProv.SetError(txtbProducto, error.Message);
+            }
+            
+                   
         }
     }
 }
