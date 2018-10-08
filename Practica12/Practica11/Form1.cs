@@ -36,7 +36,7 @@ namespace Practica11
             {
                 if(txtbProducto.Text == "")
                 {
-                    throw new ApplicationException("No dejar vacío");
+                    throw new ApplicationException("No dejar vacío :v");
                 }
                 else
                 {
