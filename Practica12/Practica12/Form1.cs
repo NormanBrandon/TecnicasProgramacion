@@ -37,9 +37,25 @@ namespace Practica11
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
-                lstEmbutidos.Add(new Salchichoneria(txtbProducto.Text));
-                lstbProductos.Items.Add(lstEmbutidos[lstEmbutidos.Count - 1].Tipo);   
+            try
+            {
+                if (txtbProducto.Text == "")
+                {
+                   
+                    throw new ApplicationException("No dejar vacío");
+                }
+                else
+                {
+                    lstEmbutidos.Add(new Salchichoneria(txtbProducto.Text));
+                    lstbProductos.Items.Add(lstEmbutidos[lstEmbutidos.Count - 1].Tipo);
+                    errorProv.Clear();
+                }
+            }
+            catch(ApplicationException error)
+            {
+                errorProv.SetError(txtbProducto, error.Message);
+            }
+                  
         }
     }
 }
