@@ -62,6 +62,7 @@ namespace Practica11
         {
             string tipo;
             tipo = (string)lstbProductos.SelectedItem;
+            lstEmbutidos.RemoveAt(lstbProductos.SelectedIndex);
             DialogResult dialogResult = MessageBox.Show("Seguro que deseas eliminar " + tipo, "Confirmacion", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
