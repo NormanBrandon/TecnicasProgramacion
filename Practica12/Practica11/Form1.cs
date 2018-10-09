@@ -9,6 +9,7 @@ namespace Practica11
     {
         Salchichoneria embutidos;
         List<Salchichoneria> lstEmbutidos;
+     
 
         public Form1()
         {
@@ -55,6 +56,27 @@ namespace Practica11
             }
             
                    
+        }
+
+        private void lstbProductos_DoubleClick(object sender, EventArgs e)
+        {
+            string tipo;
+            tipo = (string)lstbProductos.SelectedItem;
+            DialogResult dialogResult = MessageBox.Show("Seguro que deseas eliminar " + tipo, "Confirmacion", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                lstbProductos.Items.Remove(lstbProductos.SelectedItem);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+            
+        }
+
+        private void lstbProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

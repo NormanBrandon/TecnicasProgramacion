@@ -94,6 +94,8 @@
             this.lstbProductos.Name = "lstbProductos";
             this.lstbProductos.Size = new System.Drawing.Size(120, 160);
             this.lstbProductos.TabIndex = 5;
+            this.lstbProductos.SelectedIndexChanged += new System.EventHandler(this.lstbProductos_SelectedIndexChanged);
+            this.lstbProductos.DoubleClick += new System.EventHandler(this.lstbProductos_DoubleClick);
             // 
             // pictureBox1
             // 
