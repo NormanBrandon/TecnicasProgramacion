@@ -14,6 +14,7 @@ namespace Practica14
     {
         //Panaderia miPanaderia;
         Queue<Panaderia> colaPanaderia;
+        Panaderia pan;
 
         public Form1()
         {
@@ -70,6 +71,29 @@ namespace Practica14
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tu opinión es muy importante para nosotros.\n\nAhora sabremos que productos debemos mejorar. =)");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pan = (Panaderia)colaPanaderia.Peek();
+                DialogResult dialogResult = MessageBox.Show("Seguro que deseas eliminar " + pan.Nombre, "Confirmacion", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    listbPanes.Items.RemoveAt(0);
+                    colaPanaderia.Dequeue();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+            }
+            catch (Exception error) {
+
+            }
+           
+            
         }
     }
 }
