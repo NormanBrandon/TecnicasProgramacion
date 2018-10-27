@@ -35,7 +35,8 @@ namespace Practica16
                     lbNum.Text = lbNum.Text + " " +numeros;
                     txtEntrada.Text = "";
                 }
-                catch (FormatException error) {
+                catch (FormatException error)
+                {
                     txtEntrada.Text = "";
                 }
             }
@@ -44,14 +45,38 @@ namespace Practica16
 
         private void button1_Click(object sender, EventArgs e)
         {
-            V = new int[Vector.Count];
-            for (int i = 0; i < Vector.Count; i++) {
-                V[i] = Vector[i];
+            try
+            {
+                if(lbNum.Text == null)
+                {
+                    throw new ApplicationException("Ingresa por lo menos un número");
+                }
+                else
+                {
+                    V = new int[Vector.Count];
+                    for (int i = 0; i < Vector.Count; i++)
+                    {
+                        V[i] = Vector[i];
+                    }
+                    quicksort(V, 0, V.Length - 1);
+                    for (int i = 0; i < V.Length; i++)
+                    {
+                        lbOrdenado.Text = lbOrdenado.Text + V[i] + " ";
+                    }
+                    errorProv.Clear();
+                }
+               
             }
-            quicksort(V,0,V.Length -1);
-            for (int i = 0; i < V.Length; i++) {
-                lbOrdenado.Text = lbOrdenado.Text + V[i] + " ";
+            catch (ApplicationException error)
+            {
+                errorProv.SetError(txtEntrada, error.Message);
             }
+          
+                   
+                
+               
+           
+            
         }
 
         public void quicksort(int[] vector, int primero, int ultimo)
@@ -124,17 +149,20 @@ namespace Practica16
 
         private void button2_Click(object sender, EventArgs e)
         {
+          
+                    V = new int[Vector.Count];
+                    for (int i = 0; i < Vector.Count; i++)
+                    {
+                        V[i] = Vector[i];
+                    }
+                    quicksort2(V, 0, V.Length - 1);
+                    for (int i = 0; i < V.Length; i++)
+                    {
+                        lbOrdenado.Text = lbOrdenado.Text + V[i] + " ";
+                    }
             
-            V = new int[Vector.Count];
-            for (int i = 0; i < Vector.Count; i++)
-            {
-                V[i] = Vector[i];
-            }
-            quicksort2(V, 0, V.Length - 1);
-            for (int i = 0; i < V.Length; i++)
-            {
-                lbOrdenado.Text = lbOrdenado.Text + V[i] + " ";
-            }
+            
+            
             
         }
 
@@ -188,6 +216,7 @@ namespace Practica16
 
         private void btnBuscar1_Click(object sender, EventArgs e)
         {
+
             int valor = int.Parse(txtbBuscar.Text);
             int indice = binario(V, valor);
 

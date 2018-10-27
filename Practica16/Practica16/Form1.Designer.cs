@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtEntrada = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,7 +40,9 @@
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar1 = new System.Windows.Forms.Button();
             this.btnBuscar2 = new System.Windows.Forms.Button();
+            this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEntrada
@@ -149,6 +152,10 @@
             this.btnBuscar2.UseVisualStyleBackColor = true;
             this.btnBuscar2.Click += new System.EventHandler(this.btnBuscar2_Click);
             // 
+            // errorProv
+            // 
+            this.errorProv.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +168,7 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,6 +186,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar1;
         private System.Windows.Forms.Button btnBuscar2;
+        private System.Windows.Forms.ErrorProvider errorProv;
     }
 }
 
