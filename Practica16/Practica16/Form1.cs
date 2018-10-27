@@ -206,9 +206,19 @@ namespace Practica16
 
         private void btnBuscar2_Click(object sender, EventArgs e)
         {
-            if (int.Parse(txtbBuscar.Text) == )
+            int elemento = int.Parse(txtbBuscar.Text);
+            int indice = binario(V, elemento);
+            for (int k=0; k<V.Length; k++)
             {
-                MessageBox.Show("Valor encontrado en")
+                if (V[k] == elemento)
+                {
+                    MessageBox.Show("Valor encontrado en la posición: " + (elemento-1));
+                }
+                else
+                {
+                    MessageBox.Show("Valor no encontrado");
+                }
+                
             }
         }
     }
