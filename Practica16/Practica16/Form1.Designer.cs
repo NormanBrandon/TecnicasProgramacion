@@ -41,6 +41,7 @@
             this.btnBuscar1 = new System.Windows.Forms.Button();
             this.btnBuscar2 = new System.Windows.Forms.Button();
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnInformacion = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
@@ -156,11 +157,22 @@
             // 
             this.errorProv.ContainerControl = this;
             // 
+            // btnInformacion
+            // 
+            this.btnInformacion.Location = new System.Drawing.Point(251, 539);
+            this.btnInformacion.Name = "btnInformacion";
+            this.btnInformacion.Size = new System.Drawing.Size(98, 23);
+            this.btnInformacion.TabIndex = 4;
+            this.btnInformacion.Text = "Información vital";
+            this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 522);
+            this.ClientSize = new System.Drawing.Size(548, 574);
+            this.Controls.Add(this.btnInformacion);
             this.Controls.Add(this.btnBuscar2);
             this.Controls.Add(this.btnBuscar1);
             this.Controls.Add(this.groupBox1);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button btnBuscar1;
         private System.Windows.Forms.Button btnBuscar2;
         private System.Windows.Forms.ErrorProvider errorProv;
+        private System.Windows.Forms.Button btnInformacion;
     }
 }
 

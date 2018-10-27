@@ -149,7 +149,14 @@ namespace Practica16
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                if(lbNum.Text == null)
+                {
+                    throw new ApplicationException("Ingresa por lo menos un número");
+                }
+                else
+                {
                     V = new int[Vector.Count];
                     for (int i = 0; i < Vector.Count; i++)
                     {
@@ -160,9 +167,14 @@ namespace Practica16
                     {
                         lbOrdenado.Text = lbOrdenado.Text + V[i] + " ";
                     }
-            
-            
-            
+                }
+            }
+            catch(ApplicationException error)
+            {
+                errorProv.SetError(txtEntrada, error.Message);
+            }
+          
+                    
             
         }
 
@@ -216,21 +228,18 @@ namespace Practica16
 
         private void btnBuscar1_Click(object sender, EventArgs e)
         {
+        
+                    int valor = int.Parse(txtbBuscar.Text);
+                    int indice = binario(V, valor);
+                    if (indice != -1)
+                    {
+                        MessageBox.Show("Valor encontrado en la posición: " + indice);
+                    }
 
-            int valor = int.Parse(txtbBuscar.Text);
-            int indice = binario(V, valor);
-
-            if (indice != -1)
-            {
-                MessageBox.Show("Valor encontrado en la posición: " + indice);
-            }
-
-            else
-            {
-                MessageBox.Show("Valor no encontrado");
-            }
-
-
+                    else
+                    {
+                        MessageBox.Show("Valor no encontrado");
+                    }
         }
 
         private void btnBuscar2_Click(object sender, EventArgs e)
@@ -241,14 +250,16 @@ namespace Practica16
             {
                 if (V[k] == elemento)
                 {
-                    MessageBox.Show("Valor encontrado en la posición: " + (elemento-1));
-                }
-                else
-                {
-                    MessageBox.Show("Valor no encontrado");
-                }
-                
+                    MessageBox.Show("Valor encontrado");
+
+                } 
             }
+           
+        }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para llevar a cabo una busqueda es necesario hacer un ordenamiento ascendente previo a la búsqueda.");
         }
     }
 }
