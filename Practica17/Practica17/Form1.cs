@@ -12,11 +12,12 @@ namespace Practica17
 {
     public partial class Form1 : Form
     {
+        Tienda tienda;
         public Form1()
         {
             InitializeComponent();
 
-            Tienda tienda;
+            
             tienda.Nombre = "Abarrotes Rogelio";
             tienda.galletas.Nombreg = "Emperador";
             tienda.galletas.Compañiag = "Gamesa";
@@ -27,6 +28,7 @@ namespace Practica17
             tienda.refresco.Compañia = "Pepsi";
             tienda.refresco.Tamaño = "Grande";
             tienda.refresco.Precio = 27.5f;
+            txtbNombreTienda.Text = tienda.Nombre;
         }
 
         struct Tienda
@@ -80,6 +82,14 @@ namespace Practica17
 
                 MessageBox.Show("Cliente reconocido =)");
                 MessageBox.Show("Le informamos que los siguientes artículos se encuentran agotados");
+                txtbNombreGalletas.Text = tienda.galletas.Nombreg;
+                txtB1.Text = tienda.galletas.Compañiag;
+                txtB2.Text =  tienda.galletas.Preciog.ToString();
+                txtB3.Text = tienda.galletas.Tamañog;
+                txtbNombreRefresco.Text = tienda.refresco.Nombrer;
+                txtA1.Text = tienda.refresco.Compañia;
+                txtA2.Text = tienda.refresco.Precio.ToString();
+                txtA3.Text = tienda.refresco.Tamaño;
 
                 errorProv.Clear();
 

@@ -41,12 +41,12 @@
             this.txtbNombreTienda = new System.Windows.Forms.TextBox();
             this.txtbNombreRefresco = new System.Windows.Forms.TextBox();
             this.txtbNombreGalletas = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtA1 = new System.Windows.Forms.TextBox();
+            this.txtA2 = new System.Windows.Forms.TextBox();
+            this.txtA3 = new System.Windows.Forms.TextBox();
+            this.txtB1 = new System.Windows.Forms.TextBox();
+            this.txtB2 = new System.Windows.Forms.TextBox();
+            this.txtB3 = new System.Windows.Forms.TextBox();
             this.errorProv = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProv)).BeginInit();
             this.SuspendLayout();
@@ -149,47 +149,47 @@
             this.txtbNombreGalletas.Size = new System.Drawing.Size(100, 20);
             this.txtbNombreGalletas.TabIndex = 8;
             // 
-            // textBox4
+            // txtA1
             // 
-            this.textBox4.Location = new System.Drawing.Point(715, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtA1.Location = new System.Drawing.Point(715, 140);
+            this.txtA1.Name = "txtA1";
+            this.txtA1.Size = new System.Drawing.Size(100, 20);
+            this.txtA1.TabIndex = 9;
             // 
-            // textBox5
+            // txtA2
             // 
-            this.textBox5.Location = new System.Drawing.Point(715, 173);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtA2.Location = new System.Drawing.Point(715, 173);
+            this.txtA2.Name = "txtA2";
+            this.txtA2.Size = new System.Drawing.Size(100, 20);
+            this.txtA2.TabIndex = 9;
             // 
-            // textBox6
+            // txtA3
             // 
-            this.textBox6.Location = new System.Drawing.Point(715, 208);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 9;
+            this.txtA3.Location = new System.Drawing.Point(715, 208);
+            this.txtA3.Name = "txtA3";
+            this.txtA3.Size = new System.Drawing.Size(100, 20);
+            this.txtA3.TabIndex = 9;
             // 
-            // textBox7
+            // txtB1
             // 
-            this.textBox7.Location = new System.Drawing.Point(715, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 9;
+            this.txtB1.Location = new System.Drawing.Point(715, 304);
+            this.txtB1.Name = "txtB1";
+            this.txtB1.Size = new System.Drawing.Size(100, 20);
+            this.txtB1.TabIndex = 9;
             // 
-            // textBox8
+            // txtB2
             // 
-            this.textBox8.Location = new System.Drawing.Point(715, 341);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 9;
+            this.txtB2.Location = new System.Drawing.Point(715, 341);
+            this.txtB2.Name = "txtB2";
+            this.txtB2.Size = new System.Drawing.Size(100, 20);
+            this.txtB2.TabIndex = 9;
             // 
-            // textBox9
+            // txtB3
             // 
-            this.textBox9.Location = new System.Drawing.Point(715, 376);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 9;
+            this.txtB3.Location = new System.Drawing.Point(715, 376);
+            this.txtB3.Name = "txtB3";
+            this.txtB3.Size = new System.Drawing.Size(100, 20);
+            this.txtB3.TabIndex = 9;
             // 
             // errorProv
             // 
@@ -200,12 +200,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 450);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtB3);
+            this.Controls.Add(this.txtB2);
+            this.Controls.Add(this.txtB1);
+            this.Controls.Add(this.txtA3);
+            this.Controls.Add(this.txtA2);
+            this.Controls.Add(this.txtA1);
             this.Controls.Add(this.txtbNombreGalletas);
             this.Controls.Add(this.txtbNombreRefresco);
             this.Controls.Add(this.txtbNombreTienda);
@@ -240,12 +240,12 @@
         private System.Windows.Forms.TextBox txtbNombreTienda;
         private System.Windows.Forms.TextBox txtbNombreRefresco;
         private System.Windows.Forms.TextBox txtbNombreGalletas;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtA1;
+        private System.Windows.Forms.TextBox txtA2;
+        private System.Windows.Forms.TextBox txtA3;
+        private System.Windows.Forms.TextBox txtB1;
+        private System.Windows.Forms.TextBox txtB2;
+        private System.Windows.Forms.TextBox txtB3;
         private System.Windows.Forms.ErrorProvider errorProv;
     }
 }
