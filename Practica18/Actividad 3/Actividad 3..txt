@@ -1,0 +1,6 @@
+Dados dos archivos, uno de tipo bin y el otro de tipo txt con la misma información, podemos notar que ocupan la misma cantidad de memoria,
+sin embargo, cuando utilizamos un archivo de tipo .txt no es posible leer cualquier cosa que dentro del archivo no esté definido estrictamemte como
+cadena, mientras que para un archivo de tipo .bin nos es posible guardar la longitud del archivo, así como guardar y leer distintos tipos de datos
+sin que se genere ningún problema. 
+Una vez expuesto lo anterior podemos concluir que en general un archivo de tipo .bin tiende a ocupar una cantidad de memoria mucha mayor
+dadas las condiciones para las que está diseñado.
